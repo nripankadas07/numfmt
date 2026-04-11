@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numfmt"
+version = "1.0.0"
+description = "Locale-free number formatter supporting currency, percent, and scientific notation"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Nripanka Das", email = "nripankadas@gmail.com"}]
+requires-python = ">=3.8"
+keywords = ["formatting", "numbers", "currency", "percent", "scientific"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/nripankadas07/numfmt"
+Repository = "https://github.com/nripankadas07/numfmt.git"
+Issues = "https://github.com/nripankadas07/numfmt/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[tool.setuptools]
+packages = ["numfmt"]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-v --cov=numfmt --cov-report=html --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/numfmt"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
