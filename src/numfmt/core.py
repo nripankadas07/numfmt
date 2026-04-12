@@ -222,9 +222,6 @@ def _format_abs_number(
 
     int_part = _apply_thousands_separator(int_part, thousands_sep)
 
-    if precision == 0:
-        return int_part
-
     return f"{int_part}{decimal_sep}{dec_part}"
 
 
