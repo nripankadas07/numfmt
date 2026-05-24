@@ -1,6 +1,5 @@
 """Tests for percent formatting."""
-import pytest
-from numfmt.core import format_percent, NumfmtError
+from numfmt.core import format_percent
 
 
 class TestBasicPercent:
