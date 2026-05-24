@@ -15,7 +15,7 @@ Locale-free number formatter supporting currency, percent, and scientific notati
 ## Installation
 
 ```bash
-pip install numfmt
+python -m pip install -e .
 ```
 
 ## Quick Start
@@ -233,7 +233,7 @@ except NumfmtError as e:
 Install development dependencies:
 
 ```bash
-pip install numfmt[dev]
+python -m pip install -e ".[dev]"
 ```
 
 Run tests with coverage:
